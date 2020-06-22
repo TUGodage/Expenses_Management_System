@@ -1,0 +1,22 @@
+<div class="card bg-dark text-white">
+    <img src="assets\image2.png" class="card-img" alt="...">
+    <div class="card-img-overlay">
+
+
+        <div class="filter"></div>
+        <div class="container">
+            <h1>Login</h1>
+            <small style="color:red">{{error}}</small>
+            <form>
+                <label>Email</label><br>
+                <input [(ngModel)]="body.email" name="email" type="email"><br>
+                <label>Password</label><br>
+                <input [(ngModel)]="body.password" name="password" type="password"><br>
+                <button type="button" class="btn btn-secondary" (click)="submit()">Login</button>
+                <button type="button" class="btn btn-secondary" style="margin-left: 10px;" routerLink="/sign"> Sign up</button>
+            </form>
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="alert alert-dark" style="max-width: 600px; margin-left: 450px; margin-top: 100px;">
+
+    <div class="card-body" style="margin-left: 200px;">
+        Date :<br>
+        <span>{{body.date | date}}</span><br>
+        <input type="date" [(ngModel)]="body.date" name="bday" value=""> <br><br> Name :<br>
+        <input type="text" [(ngModel)]="body.title" name="bday" value=""><br><br> Expense :<br>
+        <input type="text" [(ngModel)]="body.amount" name="bday" value=""><br><br>
+        <button type="button" class="btn" (click)="add()">Save</button>
+        <button type="button" class="btn" routerLink="/view" [queryParams]="{type: body.type}">view</button>
+        <button type="button" class="btn" routerLink="">cancel</button>
+    </div>

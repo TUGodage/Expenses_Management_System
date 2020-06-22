@@ -1,0 +1,6 @@
+{
+    "env": {
+        "JWT_KEY": "some_security_key",
+        "MONGO_URI": "mongodb://localhost/upeksha"
+    }
+}

@@ -1,0 +1,24 @@
+<table class="table table-secondary" style="max-width: 1000px; margin-left: 250px; margin-top: 100px;">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Expense</th>
+            <th scope="col">Date</th>
+            <th> Update</th>
+            <th> Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of list">
+            <th>{{item._id}}</th>
+            <td>{{item.title}}</td>
+            <td>{{item.amount}}</td>
+            <td>{{item.date | date}}</td>
+            <td><button type="button" class="btn" routerLink="/add" [queryParams]="{item: item | json, type:item.type}">update</button></td>
+            <td><button type="button" class="btn" (click)="delete(item._id)">Delete</button></td>
+
+        </tr>
+
+    </tbody>
+</table>
